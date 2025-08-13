@@ -272,7 +272,11 @@ section {
     margin-top: 1rem;
 }
 
-/* Responsive Design */
+/* =================================
+   MOBILE-FRIENDLY RESPONSIVE DESIGN
+   ================================= */
+
+/* For tablets and smaller desktops */
 @media (max-width: 992px) {
     section {
         flex-direction: column;
@@ -281,16 +285,38 @@ section {
     .section-title {
         text-align: left;
         flex-basis: auto;
+        margin-bottom: 1rem; /* Add space between title and content */
     }
     #about-me .section-content {
         flex-direction: column;
         text-align: center;
+        gap: 2rem;
+    }
+    .about-me-text h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
     }
 }
 
+/* For mobile phones */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
         gap: 1rem;
+        padding: 1rem 5%;
+    }
+    .header-left {
+        text-align: center;
+    }
+    .top-menu {
+        gap: 1.5rem;
+        flex-wrap: wrap; /* Allow nav items to wrap */
+        justify-content: center;
+    }
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+    .recommendations-container {
+        grid-template-columns: 1fr; /* Stack recommendation cards */
     }
 }
