@@ -1,0 +1,296 @@
+/* General Styling */
+:root {
+    --primary-color: #5e35b1; /* Purple from reference image */
+    --background-color: #ffffff;
+    --text-color: #333;
+    --card-border-color: #ddd;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header & Navigation */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left .name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.header-left .contact-info {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.top-menu {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.top-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.top-menu a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    font-weight: 600;
+}
+
+/* General Section Styling */
+section {
+    padding: 4rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+}
+
+.section-title {
+    flex-basis: 20%;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.section-content {
+    flex-basis: 80%;
+}
+
+/* About Me Section */
+#about-me .section-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-me-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.about-me-text p {
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Skills Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.skill-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-item ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.project-item li {
+    line-height: 1.6;
+}
+
+/* Recommendations Section */
+.recommendations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.recommendation-card {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    font-style: italic;
+}
+
+/* Recommendation Form */
+#leave-recommendation {
+    padding-top: 2rem;
+}
+
+.recommendation-form {
+    max-width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.recommendation-form button {
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recommendation-form button:hover {
+    opacity: 0.9;
+}
+
+/* Home Icon */
+.home-icon {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Popup Message */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+.popup-content {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    max-width: 400px;
+}
+.popup-content h3 {
+    margin-top: 0;
+}
+.popup-content button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    section {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .section-title {
+        text-align: left;
+        flex-basis: auto;
+    }
+    #about-me .section-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
