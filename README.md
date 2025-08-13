@@ -42,7 +42,7 @@ To run this project on your local machine:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/BonyKoshy/IBM_Bony_Portfolio.git](https://github.com/BonyKoshy/IBM_Bony_Portfolio.git)
+    git clone https://github.com/BonyKoshy/IBM_Bony_Portfolio.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
